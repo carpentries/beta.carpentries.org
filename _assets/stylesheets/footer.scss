@@ -1,0 +1,234 @@
+#footer {
+	margin-top: 60px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: $black;
+	color: $buttercup;
+	@media screen and (max-width: 991px) {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+	#logo {
+		display: inline;
+		vertical-align: middle;
+		@media screen and (max-width: 991px) {
+			margin-bottom: 40px;
+		}
+	}
+	p {
+		color: $buttercup;
+	}
+	hr {
+		margin: 0;
+		background-color: $buttercup;
+		opacity: 1;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		font-size: 12px;
+		font-weight: 800;
+		text-indent: 0;
+		line-height: 18px;
+		padding: 0;
+		li {
+			text-indent: 0;
+			margin: 6px 0px 6px 0px;
+			padding: 0;
+
+		}
+	}
+	h4 {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 21px;
+	}
+	a:not(.btn) {
+		border: none;
+		color: $buttercup;
+	}
+	.footer-top {
+		align-items: center;
+		padding-bottom: 40px;
+		.footer-top-left {
+			@media screen and (max-width: 991px) {
+				margin-bottom: 40px;
+			}
+		}
+		.footer-top-right {
+			p {
+				font-size: 14px;
+				line-height: 21px;
+				font-weight: 600;
+				margin-bottom: 0;
+				@media screen and (max-width: 767px) {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+	.footer-middle {
+		padding-top: 40px;
+		padding-bottom: 30px;
+		justify-content: space-between;
+		@media screen and (max-width: 767px) {
+			padding-bottom: 18px;
+		}
+		.dropdown {
+			margin-bottom: 14px;
+			@media screen and (max-width: 1199px) {
+				max-width: 100px;
+			}
+		}
+		.dropdown-toggle {
+			background: transparent;
+			padding: 0;
+			margin: 0;
+			color: $buttercup;
+			border: none;
+			box-shadow: none;
+			&::after {
+				content: '';
+				background-image: url(asset_path('chevron-down-white.svg'));
+				background-repeat: no-repeat;
+				background-size: contain;
+				vertical-align: middle;
+				margin-left: 5px;
+				border: none !important;
+				width: 10px;
+				height: 5px;
+			}
+			&.show {
+				&::after {
+					transform: scaleY(-1);
+				}
+			}
+			h4 {
+				display: inline-block;
+			}
+		}
+		.dropdown-menu {
+			border: none;
+			box-shadow: none;
+			background: transparent;
+			position: relative !important;
+			transform: unset !important;
+			@media screen and (min-width: 768px) {
+				display: block !important;
+			}
+			@media screen and (max-width: 767px) {
+				padding-left: 16px;
+				padding-top: 6px;
+				white-space: nowrap;
+			}
+			li {
+				margin-bottom: 10px;
+				@media screen and (max-width: 767px) {
+					margin-bottom: 20px;
+				}
+				a {
+					font-weight: 800;
+					color: $buttercup;
+					@media screen and (max-width: 767px) {
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 21px;
+					}
+					&::after {
+						@media screen and (max-width: 767px) {
+							content: '';
+							background-image: url(asset_path('arrow-right-white.svg'));
+							background-repeat: no-repeat;
+							background-size: contain;
+							vertical-align: middle;
+							margin-left: 5px;
+							border: none !important;
+							width: 20px;
+							height: 10px;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		padding-top: 40px;
+		align-items: center;
+		.footer-bottom-left {
+			@media screen and (max-width: 991px) {
+				margin-bottom: 25px;
+			}
+			.site-copyright, a {
+				font-size: 14px;
+				line-height: 21px;
+				font-weight: 600;
+				display: inline-block;
+			}
+			.site-copyright {
+				margin-right: 32px;
+			}
+			a {
+				font-size: 700;
+			}
+		}
+		.footer-bottom-right {
+			text-align: right;
+			h4 {
+				font-size: 12px;
+				line-height: 18px;
+				font-weight: 800;
+				display: inline-block;
+				margin-right: 24px;
+				@media screen and (max-width: 991px) {
+					display: block;
+					text-align: left;
+					font-size: 16px;
+					line-height: 24px;
+					margin-bottom: 20px;
+				}
+			}
+			.social-menu {
+				display: inline-block;
+				margin-right: 48px;
+				font-weight: unset;
+				@media screen and (max-width: 991px) {
+					float: left;
+					margin-bottom: 45px;
+					margin-right: 0;
+					width: 50%;
+					margin-left:0px;
+					text-align:left;
+				}
+				li {
+					display: inline-block;
+					&:not(:last-child) {
+						margin-right: 24px;
+						@media screen and (max-width: 991px) {
+							margin-right: 34px;
+						}
+					}
+					a {
+						&:hover, &:focus {
+							img {
+								position: relative;
+								bottom: 3px;
+							}
+						}
+					}
+				}
+			}
+			.btn {
+				@media screen and (max-width: 991px) {
+					float: left;
+					clear: both;
+				}
+			}
+		}
+	}
+}
+
+.home #footer {
+	margin-top: 0;
+}

@@ -1,0 +1,16 @@
+.skip-link{
+	background:white;
+	height: 30px;
+	left: 50%;
+	padding: 5	px;
+	position: absolute;
+	transform: translateY(-100%);
+	transition: transform 0.3s;
+	z-index:125;
+	&.aside{
+		left: 30%;
+	}
+	&:focus{
+		transform: translateY(0%);
+	}
+}

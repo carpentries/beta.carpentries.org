@@ -1,0 +1,39 @@
+.hero {
+	padding-top: 159px;
+	padding-bottom: 141px;
+	background: $black;
+	position: relative;
+	@media screen and (max-width: 767px) {
+		padding-top: 72px;
+		padding-bottom: 72px;
+	}
+	& > .container {
+		position: relative;
+		z-index: 2;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 1;
+		filter: brightness(85%);
+	}
+	h1 {
+		font-size: 42px;
+		line-height: 50px;
+		font-weight: 600;
+		max-width: 594px;
+		color: $white;
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			line-height: 30px;
+			font-weight: 700;
+			max-width: 239px;
+		}
+	}
+}

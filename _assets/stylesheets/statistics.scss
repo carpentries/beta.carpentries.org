@@ -1,0 +1,79 @@
+.statistics {
+	background: $buttercup;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	&.about-us{
+		width:100%;
+		margin: 0px;
+		padding: 25px 0px 25px 0px;
+		background: none;
+		@media screen and (min-width: 767px) {
+			.blob{
+				width:100%;
+			}
+		}
+	}
+	@media screen and (max-width: 767px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.container {
+		max-width: 965px;
+	}
+	h2 {
+		margin: 0;
+		margin-bottom: 40px;
+	}
+	.btn {
+		margin: 0;
+		margin-top: 40px;
+		@media screen and (max-width: 767px) {
+			margin-top: 0;
+		}
+	}
+	.stat {
+		position: relative;
+		min-height: 240px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media screen and (max-width: 767px) {
+			margin-bottom: 40px;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		p {
+			margin: 0;
+		}
+		.wrapper {
+			position: relative;
+		}
+		.stat-text {
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 700;
+			@media screen and (max-width: 767px) {
+				line-height: 13px;
+			}
+		}
+		.stat-number {
+			font-size: 42px;
+			line-height: 50px;
+			font-weight: 600;
+			margin-top: 16px;
+			margin-bottom: 16px;
+			@media screen and (max-width: 767px) {
+				font-size: 28px;
+				line-height: 39px;
+				margin-top: 6px;
+				margin-bottom: 6px;
+			}
+		}
+	}
+}

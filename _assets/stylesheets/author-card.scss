@@ -1,0 +1,37 @@
+.author-card {
+	display: inline;
+	color: $very-dark-gray;
+	.images {
+		display: inline;
+		margin-right: 5px;
+	}
+	.author{
+		font-weight: 700;
+		letter-spacing: 0.16em;
+		font-size: 10px;
+		line-height: 13px;
+	}
+	.person {
+		height: 24px;
+		width: 24px;
+		border-radius: 12px;
+		border: thin solid $fire;
+		margin: 0;
+		&.overlap {
+			position:relative;
+			left:-12px;
+			&.index-3 {
+				left:-24px;
+				margin-right:-24px;
+			}
+			&.index-4 {
+				left:-48px;
+				margin-right:-48px;
+			}
+			&.index-5 {
+				left:-96px;
+				margin-right:-96px;
+			}
+		}
+	}
+}

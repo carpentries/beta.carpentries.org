@@ -1,0 +1,36 @@
+.pill {
+	font-size: 12px;
+	color: $white;
+	background: $very-dark-gray;
+	border-radius: 100px;
+	padding: 5px 10px 5px 10px;
+	display:inline-block;
+}
+.checked-chip {
+	display:inline-block;
+	padding: 3px 8px 3px 8px;
+	font-size: 10px;
+	font-weight: 700;
+	background: $buttercup;
+	margin: 0px 4px 8px 0px;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	color: $black;
+	&:before {
+		border: none;
+		position: relative;
+		top: 3px;
+		left: 0px;
+		margin-right: 10px;
+		content: url(asset_path('small-check.svg'));
+	}
+}
+.chip {
+	display: table;
+	padding: 10px 20px 10px 20px;
+	font-size: 12px;
+	border: 1px solid $dark-gray;
+	border-radius: 3px;
+	background: $white;
+	margin-bottom: 8px;
+}

@@ -1,0 +1,35 @@
+{% if page.layout != 'blog_search' %}
+<search>
+	<div>
+		<span id="search-icon">{% asset search-icon alt="Search Icon" %}</span><input type="search" class="search" placeholder="Search" aria-label="Blog search" id="blog_searchbox" role="searchbox" aria-autocomplete="list" aria-controls="autocomplete" aria-haspopup="listbox" aria-expanded="false"></input>
+		<div role="listbox" id="autocomplete">
+			<ul>
+				<li role="option">Wrapping Up the Carpentries <strong>Python</strong>…<div class="date">Jul 8, 2021</div></li>
+				<li role="option">New book: Research Software Engineering with <strong>Python</strong>...<div class="date">Jul 29, 2021</div></li>
+				<li role="option">Incubator Lesson Spotlight: <strong>Python</strong> for Business...<div class="date">Apr 20, 2021</div></li>
+			</ul>
+		</div>
+	</div>
+</search>
+<hr/>
+{% endif %}
+<h2>Related topics</h2>
+<ul class="tags">
+	<li class="chip"><a href="#">CarpentryConnect</a></li>
+	<li class="chip"><a href="#">Community</a></li>
+	<li class="chip"><a href="#">Data Carpentry</a></li>
+	<li class="chip"><a href="#">R</a></li>
+	<li class="chip"><a href="#">Python</a></li>
+	<li class="chip"><a href="#">Strategic Plan</a></li>
+</ul>
+<hr/>
+<h2>Top contributers</h2>
+{% include components/top_contributers.html %}
+<hr/>
+<h2>Thank you to our sponsors</h2>
+<ul>
+	<li>sponsor logo</li>
+	<li>sponsor logo</li>
+</ul>
+<hr/>
+{% include parts/feedback.html %}

@@ -1,0 +1,20 @@
+{% for post in site.posts limit:1000 %}
+<article>
+	{% include components/author_card.html %}
+	<h2>
+		<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"> {{ post.title }} </a>
+	</h2>
+	<p class="teaser">
+		{{ post.teaser }}
+	</p>
+	{% if post.date %}
+		<time class="icon-calendar pr20" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished"> {{ post.date | date: "%b %d, %Y" }}</time>
+	{% endif %}
+
+	{% for tag in post.tags %}
+		<span class="pill">{{ tag }}</span>
+	{% endfor %}
+</article>
+{% endfor %}
+<br/>
+<button class="btn btn-text">Load More</button>

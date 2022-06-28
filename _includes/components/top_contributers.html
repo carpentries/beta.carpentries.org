@@ -1,0 +1,23 @@
+{% if page.contributers %}
+<ul class="no-indent">
+	{% for author in page.contributers %}
+	<li class="contributer-card">
+		<div class="images">
+			
+				{% assign file = author | replace: ' ', '' | replace: ',', '' %}
+				{% assign badge_url = page_url | append: file | append: '.jpg' %}
+				<img alt=""class="person"src="/assets/{{ badge_url }}"></img>
+			
+		</div>
+		
+			<a href="#">
+			<span itemscope itemtype="http://schema.org/Person">
+				<span itemprop="name" class="author">{{ author }}</span>
+			</span>{% asset arrow alt="" %}
+			</a>
+		
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}
+

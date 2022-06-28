@@ -1,0 +1,18 @@
+<span id="search-icon">{% asset search-icon %}</span><input class="search" type="search" placeholder="Search" />
+<hr/>
+<h2>Related topics</h2>
+<ul class="tags">
+	{% for tag in page.tags %}
+		<a href="#"><li class="chip">{{ tag }}</li></a>
+	{% endfor %}
+</ul>
+<hr/>
+<h2>Follow {{ page.authors.first }}</h2>
+<ul class="social-menu">
+	<li><a href="https://www.facebook.com/carpentries/" aria-label="Facebook">{% asset facebook-logo alt:'' %}</a></li>
+	<li><a href="https://twitter.com/thecarpentries" aria-label="Twitter">{% asset twitter-logo alt:'' %}</a></li>
+	<li><a href="https://www.linkedin.com/company/the-carpentries/" aria-label="LinkedIn">{% asset linkedin-logo alt:'' %}</a></li>
+	<li><a href="https://github.com/carpentries" aria-label="GitHub">{% asset github-logo alt:'' %}</a></li>
+</ul>
+<hr/>
+{% include parts/feedback.html %}

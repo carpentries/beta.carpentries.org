@@ -1,0 +1,31 @@
+{% if page.authors %}
+	<div class="author-card">
+		<div class="images">
+			{% for author in page.authors %}
+				{% assign file = author | replace: ' ', '' | replace: ',', '' | replace: '.', '' %}
+				{% assign badge_url = page_url | append: file | append: '.jpg' %}
+				<img alt="" class="person {% if forloop.index > 1 %}overlap{% endif %} index-{{ forloop.index }}"src="/assets/{{ badge_url }}"></img>
+			{% endfor %}
+		</div>
+		{%- for author in page.authors -%}
+			{%- if forloop.index > 1 -%}, {%- endif %}
+			<a href="#"><span itemprop="name" class="author">{{ author }}</span></a>
+		{%- endfor -%}
+	</div>
+{% endif %}
+{% if post.authors %}
+	<div class="author-card">
+		<div class="images">
+			{% for author in post.authors %}
+				{% assign file = author | replace: ' ', '' | replace: ',', '' | replace: '.', '' %}
+				{% assign badge_url = page_url | append: file | append: '.jpg' %}
+				<img alt="" class="person {% if forloop.index > 1 %}overlap{% endif %} index-{{ forloop.index }}"src="/assets/{{ badge_url }}"></img>
+			{% endfor %}
+		</div>
+		{%- for author in post.authors -%}
+			{%- if forloop.index > 1 -%}, {%- endif %}
+			<a href="#"><span itemprop="name" class="author">{{ author }}</span></a>
+		{%- endfor -%}
+	</div>
+{% endif %}
+

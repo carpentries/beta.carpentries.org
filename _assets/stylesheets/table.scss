@@ -1,0 +1,41 @@
+#sponsorship-table {
+	width:100%;
+	margin: 32px 0px 32px 0px;
+	th {
+		text-align: center;
+		font-weight: 800;
+		font-size: 14px;
+		line-height: 150%;
+		margin: 0px 6px 0px 6px;
+		padding: 0px 5px 0px 5px;
+		@include media-breakpoint-down(md) {
+				padding:0px 2px 0px 2px ;
+				font-size:12px;
+			}
+		&[scope=row]{
+			font-weight: 500;
+			width:160px;
+			text-align: left;
+		}
+		.small{
+			font-weight: 600;
+			font-size: 12px;
+			min-height: 4em;
+		}
+	}
+	tr {
+		height: 35px;
+		padding: 8px;
+		&:nth-child(even) {
+			background-color: $dew;
+		}
+		td{
+			text-align: center;
+			padding: 0px 5px 0px 5px;
+			@include media-breakpoint-down(md) {
+				padding:0;
+			}
+		}
+	}
+
+}

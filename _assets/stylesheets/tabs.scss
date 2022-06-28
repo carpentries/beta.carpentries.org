@@ -1,0 +1,21 @@
+.section-tabs {
+	margin-bottom: 15px;
+	.nav-link {
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-right: 50px;
+		font-size: 14px;
+		font-weight: 800;
+		color: $black;
+		&.active{
+			border: none;
+			border-bottom: 4px solid $black;
+		}
+		@include media-breakpoint-down(md) {
+				margin-right:10px;
+		}
+	}
+}
+.sub-nav {
+	margin-right: 81px;
+}

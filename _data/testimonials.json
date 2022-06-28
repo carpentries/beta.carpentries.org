@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Ethan White",
+    "bio": "Associate Professor and Moore Investigator in the Department of Wildlife Ecology and Conservation and the Informatics Institute at the University of Florida",
+    "image": "ethan-white.png",
+    "flag": "🇺🇸",
+    "link": "#",
+    "quote": "Software Carpentry training has had a tremendous influence on the productivity of the students in my lab and several other labs on campus."
+  },
+  {
+    "name": "Lorem Ipsum",
+    "bio": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    "image": "workshops-photo.jpg",
+    "flag": "🇬🇧",
+    "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]

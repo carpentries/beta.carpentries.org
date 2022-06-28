@@ -1,0 +1,24 @@
+---
+layout: workshops_browse
+title: Upcoming workshops - The Carpentries
+breadcrumb: Upcoming workshops
+---
+<div class="btn-group">
+	<button type="button" class="btn btn-text dropdown-toggle sort" data-bs-toggle="dropdown" aria-expanded="false">
+		Sort by date
+	</button>
+	<ul class="dropdown-menu">
+		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
+		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
+		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
+	</ul>
+</div>
+<button type="button" class="btn btn-text filter float-end" aria-expanded="false">
+	{% asset "filter" %} Filter
+</button>
+<div id="workshop-container">
+	{% include parts/workshop_list.html %}
+</div>
+<hr/>
+<br/>
+<p class="sm">See past workshops <a href="past_workshops.html" class="link underline">here</a>.</p>

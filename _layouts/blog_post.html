@@ -1,0 +1,45 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% asset styles %}
+		{% asset scripts %}
+		{% include parts/favicon.html %}
+	</head>
+	<body>
+		<a href="#main" class="skip-link">Skip to main</a>
+		{% include header.html %}
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					{% include parts/breadcrumbs.html %}
+				</div>
+				<div class="row">
+					<div class="col-md-8 single-post">
+						{% include components/author_card.html %}
+						<time class="date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"> &nbsp;•&nbsp; {{ page.date | date: "%b %d, %Y" }}</time>
+						<h1 class="blog-title">{{ page.title}}</h1>
+						<h2 class="teaser">{{ page.teaser }}</h2>
+						<main id="main">
+							{{ content }}
+						</main>
+					</div>
+					
+						<div class="col-md-4 sidebar-wrapper">
+							<a href="#footer" class="skip-link aside visually-hidden-focusable">Skip sidebar</a>
+							{% include components/puller.html %}
+							<aside id="main-sidebar" aria-label="Main Sidebar" class="sidebar" tabindex="-1" >
+								<div class="offcanvas-header justify-content-end d-black d-md-none">
+									<button type="button" class="btn-close text-reset d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#main-sidebar" aria-controls="main-sidebar" aria-label="Close"></button>
+								</div>
+								{% include sidebars/blog_post.html %}
+							</aside>
+						</div>
+					
+				</div>
+			</div>
+			{% include footer.html %}
+		</body>
+		</html>

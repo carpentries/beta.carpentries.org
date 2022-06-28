@@ -1,0 +1,49 @@
+.fifty-fifty {
+	background: $sky;
+	text-align: center;
+	.row {
+		align-items: center;
+	}
+	.image {
+		background-size: cover;
+		min-height: 500px;
+		position: relative;
+		.image-caption {
+			color: #fff;
+			font-size: 12px;
+			font-weight: 600;
+			position: absolute;
+			bottom: 0;
+			margin-bottom: 24px;
+			margin-left: 2px;
+		}
+	}
+	.content {
+		@media screen and (max-width: 767px) {
+			padding-bottom: 15px;
+		}
+		.wrapper {
+			max-width: 518px;
+			margin: 0 auto;
+			@media screen and (max-width: 767px) {
+				padding-top: 15px;
+			}
+			h2 {
+				margin: 0;
+				@media screen and (max-width: 767px) {
+					font-weight: 600;
+				}
+			}
+			p {
+				margin: 0;
+				margin-top: 16px;
+			}
+			.btn {
+				margin-top: 40px;
+				@media screen and (max-width: 767px) {
+					margin-top: 25px;
+				}
+			}
+		}
+	}
+}

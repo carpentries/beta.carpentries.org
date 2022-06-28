@@ -1,0 +1,97 @@
+<header id="header">
+	<nav id="utility-nav" aria-label="Utility Menu">
+		<div class="container">
+			<!-- desktop utility nav -->
+			<ul id="utility-menu" class="d-none d-md-block">
+				<li><a href="#" class="active">The Carpentries</a></li>
+				<li><a href="#">Data Carpentry</a></li>
+				<li><a href="#">Software Carpentry</a></li>
+				<li><a href="#">Library Carpentry</a></li>
+			</ul>
+			<!-- mobile utility nav -->
+			<div id="utility-form" class="accordion d-block d-md-none shadow-none">
+				<div class="accordion-item bg-transparent border-0">
+					<h1 class="accordion-header m-0" id="siteSelectorHeader">
+						<button class="accordion-button lh-sm fw-bold w-auto collapsed bg-transparent px-0 py-1 text-white mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#sites-list" aria-expanded="false" aria-controls="sites-list">
+							The Carpentries
+			      </button>
+					</h1>
+					<div id="sites-list" class="accordion-collapse collapse" aria-labelledby="siteSelectorHeader">
+						<div class="d-flex flex-column gap-2">
+							<a class="text-white" href="/">Data Carpentry</a>
+							<a class="text-white" href="/">Software Carpentry</a>
+							<a class="text-white" href="/">Library Carpentry</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<nav id="main-nav" class="navbar navbar-expand-lg" aria-label="Main Menu">
+		<div class="container">
+			<a href="/home.html" class="site-logo" aria-label="The Carpentries">{% asset carpentries-logo alt:'' %}</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-controls="menu-collapse" aria-expanded="false" aria-label="Menu">
+				<span class="navbar-toggler-hamburger">
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</span>
+				Menu
+			</button>
+			<div class="collapse navbar-collapse" id="menu-collapse">
+				<ul id="main-menu" class="nav">
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">About us</a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ site.baseurl }}{% link about-us.html %}">About The Carpentries</a></li>
+							<li><a href="#">Our impact</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="{{ site.baseurl }}{% link about-us/our-funding.html %}">Our funding</a></li>
+							<li><a href="{{ site.baseurl }}{% link about-us/our-funding/sponsorship.html %}">Sponsorship</a></li>
+							<li><a href="#">Our team</a></li>
+							<li><a href="#">Our community</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Workshops</a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ site.baseurl }}{% link workshops.html %}">About workshops</a></li>
+							<li><a href="{{ site.baseurl }}{% link workshops/upcoming-workshops.html %}">Current workshops</a></li>
+							<li><a href="{{ site.baseurl }}{% link workshops/past-workshops.html %}">Past workshops</a></li>
+							<li><a href="#">Host a workshop</a></li>
+							<li><a href="#">Request a workshop</a></li>
+							<li><a href="#">Curricula</a></li>
+							<li><a href="#">Software Carpentries workshops</a></li>
+							<li><a href="#">Data Carpentries workshops</a></li>
+							<li><a href="#">Library Carpentries workshops</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Volunteer</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Become an instructor</a></li>
+							<li><a href="#">Develop a lesson</a></li>
+							<li><a href="#">Join a comittee</a></li>
+							<li><a href="#">Mentorship program</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Membership</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Join The Carpentries</a></li>
+							<li><a href="#">Current members</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="{{ site.baseurl }}{% link blog.html %}" class="nav-link">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="btn btn-ghost nav-link">Donate</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>

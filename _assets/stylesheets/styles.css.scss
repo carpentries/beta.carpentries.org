@@ -1,0 +1,33 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "body";
+@import "typography";
+@import "buttons";
+@import "links";
+@import "inputs";
+@import "quote";
+@import "sidebar";
+@import "footer";
+@import "table";
+@import "header";
+@import "cta-banner";
+@import "hero";
+@import "fifty-fifty";
+@import "tabs";
+@import "chips";
+@import "statistics";
+@import "supporters";
+@import "testimonials";
+@import "author-card";
+@import "contributer-card";
+@import "images";
+@import "article";
+@import "workshops";
+@import "blog";
+@import "accessibility";
+
+.index-list {
+	margin: 0 auto;
+	width: 300px;
+	margin-top: 50px;
+}

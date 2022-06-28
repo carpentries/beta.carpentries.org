@@ -1,0 +1,106 @@
+@font-face {
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 400;
+			src: url(font_path('Mulish-Regular.ttf')) format('truetype');
+}
+@font-face {
+	font-family: 'Mulish';
+	src: url(font_path("Mulish-SemiBold.ttf")) format("truetype");
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: url(font_path("Mulish-Bold.ttf")) format("truetype");
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Mulish';
+	src: url(font_path("Mulish-ExtraBold.ttf")) format("truetype");
+	font-weight: 800;
+}
+body {
+	font-family: 'Mulish';
+}
+p {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+	color: $very-dark-gray;
+	&.sm {
+		font-size: 14px;
+	}
+}
+hr {
+	border-color: $light-gray;
+	margin: 30px 0px 30px 0px;
+}
+h1, h2, h3 {
+	font-weight: 600;
+	line-height: 140%;
+}
+h1 {
+	font-size: 32px;
+	margin: 16px 0px 16px 0px;
+	&.page-title {
+		margin: 40px 0px 40px 0px;
+	}
+}
+.home{
+	h1{
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+h2 {
+	font-size: 28px;
+	line-height: 34px;
+	font-weight: 600;
+	margin: 30px 0px 16px 0px;
+	@media screen and (max-width: 767px) {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+	}
+	&.bigger-mobile {
+		@media screen and (max-width: 767px) {
+			font-size: 20px;
+			line-height: 28px;
+			font-weight: 600;
+		}
+	}
+}
+h3 {
+	font-size: 20px;
+	margin: 12px 0px 12px 0px;
+}
+a {
+	text-decoration: none;
+	&:hover, &:focus, &:active {
+		text-decoration: underline;
+	}
+}
+main{
+	a{
+		text-decoration: underline;
+	}
+}
+figcaption{
+	font-size: 12px;
+	color: $very-dark-gray;
+}
+#benefit_details{
+	h3{
+		margin-top: 25px;
+	}
+	hr{
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+}
+@include media-breakpoint-down(md) {
+	.container{
+		padding: 0px 16px 0px 16px;
+	}
+}
+

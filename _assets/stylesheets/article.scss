@@ -1,0 +1,71 @@
+article{
+	border: 1px solid $fog;
+	padding: 32px;
+	margin-top: 16px;
+	.carpentry, .language, .venue, .meeting{
+		font-weight:700;
+	}
+	.author {
+		font-size: 10px;
+		color: $very-dark-gray;
+		text-transform: uppercase;
+	}
+	.teaser {
+		margin-bottom: 30px;
+		margin-top: 5px;
+	}
+	time {
+		color: $very-dark-gray;
+		font-size: 14px;
+		font-weight:600;
+		margin-right: 15px;
+	}
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 0px;
+		a {
+		color: $black;
+		}
+	}
+	p {
+		font-size: 18px;
+	}
+	.helpers, .instructors {
+		font-size: 12px;
+	}
+	.instructors {
+		margin-top: 0px;
+	}
+	.helpers {
+		margin-top: 10px;
+
+	}
+	.workshop-flex {
+		width: 100%;
+		text-transform: uppercase;
+		font-size: 10px;
+		letter-spacing: 0.16em;
+		color: $very-dark-gray;
+		display: flex;
+		* {
+			margin-right: 15px;
+		}
+	}
+	.list-icon {
+		width: 20px;
+		height: 20px;
+		margin: 0px 5px 0px 5px; 
+	}
+	.pill {
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+	.date-tags {
+		margin-top: 25px;
+	}
+	.tags-heading {
+		display: inline;
+		font-size: 12px;
+		font-weight: bold;
+	}
+}

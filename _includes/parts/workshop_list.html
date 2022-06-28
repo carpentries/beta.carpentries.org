@@ -1,0 +1,68 @@
+{% for workshop in site.data.full_workshops %}
+	<article>
+		<ul class="workshop-flex flex-wrap list-unstyled">
+			<li class="carpentry">
+				{% asset "{{ workshop.carpentry_logo }}" class="list-icon" %} {{ workshop.carpentry }}
+			</li>
+			<li class="language">
+				{% asset "{{ workshop.language_icon }}" class="list-icon" %}{{ workshop.language }}
+			</li>
+			<li class="venue">
+				{% asset "{{ workshop.venue_logo }}" class="list-icon" %}{{ workshop.venue }}
+			</li>
+			<li class="meeting">
+				{% asset "{{ workshop.meeting }}" class="list-icon" %} {{ workshop.meeting }}
+			</li>
+		</ul>
+		<h2>
+			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"> {{ workshop.title }} </a>
+		</h2>
+		<p class="teaser">
+			{{ workshop.audience }}
+		</p>
+
+		<ul class="list-unstyled mb-0">
+			{% if workshop.instructors %}
+			<li class="instructors d-flex flex-row"><strong>Instructors:&nbsp</strong>
+				<ul class="list-unstyled mb-0 d-flex flex-row flex-wrap">
+					{%- for person in workshop.instructors -%}
+						<li>
+							{%- if forloop.index > 1 -%}, {% endif -%}
+							{{ person -}}
+						</li>
+					{%- endfor -%}
+				</ul>
+			</li>
+			{% endif %}
+
+			{% if workshop.helpers %}
+				<li class="helpers d-flex flex-row"><strong>Helpers:&nbsp</strong>
+					<ul class="list-unstyled mb-0 d-flex flex-row flex-wrap">
+						{%- for person in workshop.helpers -%}
+							<li>
+								{%- if forloop.index > 1 -%}, {% endif -%}
+								{{ person -}}
+							</li>
+						{%- endfor -%}
+					</ul>
+				</li>
+			{% endif %}
+		</ul>
+
+		<div class="date-tags">
+			{% if workshop.start_date %}
+				<time class="icon-calendar pr20" datetime="{{ workshop.start_date | date_to_xmlschema }}" itemprop="datePublished"> {{ workshop.start_date | date: "%b %d" }} - {{ workshop.end_date | date: "%b %d %Y"}}</time>
+			{% endif %}
+			{% if workshop.tags %}
+			<div class="d-inline-flex align-items-start">
+				<h3 class="tags-heading mt-1">Tags:&nbsp</h3>
+				<ul class="list-unstyled mb-0 d-inline-flex flex-row flex-wrap">
+					{% for tag in workshop.tags %}
+						<li class="pill">{{ tag }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+		</div>
+	</article>
+{% endfor %}

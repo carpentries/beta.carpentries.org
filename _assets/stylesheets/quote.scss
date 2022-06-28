@@ -1,0 +1,30 @@
+.quote {
+	position:relative;
+	padding: 40px;
+	font-size: 24px;
+	color: $buttercup;
+	line-height: 140%;
+	border-radius: 8px;
+	background: $fire;
+	width: 518px;
+	margin: 0 auto;
+	margin-bottom:25px;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 25px solid transparent;
+		border-top-color: $fire;
+		border-bottom: 0;
+		margin-left: -20px;
+		margin-bottom: -25px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 14px;
+		padding:16px;
+		width:342px;
+	}
+}

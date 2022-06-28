@@ -1,0 +1,54 @@
+port: 4001
+url: https://beta.carpentries.org
+plugins:
+  - jekyll-assets
+assets:
+  #compress:
+    #css:  scss
+    #js:   uglifier
+  #external:
+  #  uglifier:
+  #    harmony: true
+  features:
+    liquid: true
+    integrity: false
+  digest: false
+  source_maps: true
+  sources:
+    - _assets/stylesheets
+    - _assets/javascripts
+    - _assets/images
+    - _assets/downloads
+    - _assets/fonts
+  jekyll_get_json:
+    - data: workshops
+      json: '_data/all_workshops.json'
+    - data: workshops_full
+      json: '_data/full_workshops.json'
+    - data: statistics
+      json: '_data/statistics.json'
+    - data: testimonials
+      json: '_data/testimonials.json'
+  plugins:
+    img:
+      optim:
+        default:
+          verbose: true
+          svgo: false
+        optimized:
+          verbose: true
+          allow_lossy: true
+          pack: true
+          svgo: true
+          pngout: false
+          pngcrush: false
+          pngquant: false
+          advpng: false
+          jpegrecompress:
+            allow_lossy: true
+            quality: 2
+          jpegoptim:
+            allow_lossy: false
+            strip: all
+          optipng:
+            level: 6

@@ -1,0 +1,48 @@
+<div class="testimonials">
+	<div class="container">
+		<div id="testimonial-carousel" class="carousel slide" data-bs-interval="false" role="region" aria-roledescription="carousel">
+			<div class="carousel-inner">
+				{% assign isFirst = true %}
+				{% for testimonials in site.data.testimonials %}
+				<div class="carousel-item testimonial {% if isFirst == true %} active {% endif %}" role="group" aria-roledescription="slide" aria-label="Testimonial from {{ testimonials.name }}">
+					{% assign isFirst = false %}
+					<div class="wrapper">
+						<div class="testimonial-quote">
+							<blockquote>{{ testimonials.quote }}</</blockquote>
+						</div>
+						<div class="testimonial-author">
+							<div class="author-image">
+								{% asset author-blob class="blob" alt:'' %}
+								<img src="/assets/{{ testimonials.image }}" class="headshot" alt="">
+							</div>
+							{% if testimonials.link != null %}
+							<a href="{{ testimonials.link }}" class="author-name" role=”heading” aria-level="3">{{ testimonials.name }} {{ testimonials.flag }} {% asset arrow-right-black alt:'' %}</a>
+							{% else %}
+							<h3 class="author-name">{{ testimonials.name }} {{ testimonials.flag }}</h3>
+							{% endif %}
+							<p class="author-bio">{{ testimonials.bio }}</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="carousel-indicators">
+				{% assign slideNum = 1 %}
+				{% assign slideTo = 0 %}
+				{% assign isFirst = true %}
+				{% for testimonials in site.data.testimonials %}
+				<button type="button" data-bs-target="#testimonial-carousel" data-bs-slide-to="{{ slideTo }}" class="{% if isFirst == true %} active {% endif %}" aria-current="{% if isFirst == true %} true {% endif %}" aria-label="Slide {{ slideNum }}"></button>
+				{% assign slideNum  = slideNum | plus: 1 %}
+				{% assign slideTo = slideTo | plus: 1 %}
+				{% assign isFirst = false %}
+				{% endfor %}
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev" aria-label="Previous testimonial">
+				{% asset stroke-left alt:'' %}
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next" aria-label="Next testimonial">
+				{% asset stroke-right alt:'' %}
+			</button>
+		</div>
+	</div>
+</div>

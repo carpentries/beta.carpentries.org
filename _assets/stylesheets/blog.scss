@@ -1,0 +1,42 @@
+.blog-search {
+	margin-top: 0px;
+	.search {
+		width: 100%;
+		font-size: 32px;
+		padding: 16px 16px 16px 64px;
+		margin-bottom: 20px;
+	}
+	.results {
+		font-size: 16px;
+		color: $black;
+		font-weight: 700;
+	}
+	.sort {
+		margin-bottom: 40px;
+		margin-top: 30px
+	}
+}
+.single-post {
+	margin: 45px 0px 0px 0px;
+	.author, .date {
+		font-size: 14px;
+		color: $very-dark-gray;
+		letter-spacing: normal;
+		a {
+			color: $very-dark-gray;
+		}
+	}
+	.blog-title {
+		margin: 20px 0px 0px 0px;
+	}
+	.teaser {
+		color: $very-dark-gray;
+		font-size: 24px;
+		margin: 20px 0px 16px 0px;
+	}
+	.img-fluid {
+		border: thin solid $light-gray;
+		border-radius: 16px;
+		margin-top: 40px;
+	}
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }} | The Carpentries</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% asset styles %}
+		{% asset scripts %}
+		{% include parts/favicon.html %}
+	</head>
+	<body class="home">
+		<a href="#main" class="skip-link">Skip to main</a>
+		{% include header.html %}
+		<main id="main">
+			{{ content }}
+		</main>
+		{% include footer.html %}
+	</body>
+	</html>
