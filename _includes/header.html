@@ -4,9 +4,9 @@
 			<!-- desktop utility nav -->
 			<ul id="utility-menu" class="d-none d-md-block">
 				<li><a href="#" class="active">The Carpentries</a></li>
-				<li><a href="#">Data Carpentry</a></li>
-				<li><a href="#">Software Carpentry</a></li>
-				<li><a href="#">Library Carpentry</a></li>
+				<li><a href="{{ site.dc_website }}">Data Carpentry</a></li>
+				<li><a href="{{ site.sc_website }}">Software Carpentry</a></li>
+				<li><a href="{{ site.lc_website }}">Library Carpentry</a></li>
 			</ul>
 			<!-- mobile utility nav -->
 			<div id="utility-form" class="accordion d-block d-md-none shadow-none">
@@ -29,7 +29,7 @@
 	</nav>
 	<nav id="main-nav" class="navbar navbar-expand-lg" aria-label="Main Menu">
 		<div class="container">
-			<a href="/home.html" class="site-logo" aria-label="The Carpentries">{% asset carpentries-logo alt:'' %}</a>
+			<a href="{{ site.url }}" class="site-logo" aria-label="The Carpentries">{% asset carpentries-logo alt:'' %}</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-collapse" aria-controls="menu-collapse" aria-expanded="false" aria-label="Menu">
 				<span class="navbar-toggler-hamburger">
 					<span class="hamburger-line"></span>

@@ -1,8 +1,17 @@
 url: https://beta.carpentries.org
+permalink: /:title/
 plugins:
   - jekyll-assets
 exclude:
   - README.md
+
+## Variables -------------------------------------------------------------------
+dc_website: https://datacarpentry.org
+sc_website: https://software-carpentry.org
+lc_website: https://librarycarpentry.org
+
+
+## Assets plugin configuration -------------------------------------------------
 assets:
   #compress:
     #css:  scss
