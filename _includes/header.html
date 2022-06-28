@@ -43,49 +43,54 @@
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">About us</a>
 						<ul class="dropdown-menu">
-							<li><a href="{{ site.baseurl }}{% link about-us.html %}">About The Carpentries</a></li>
-							<li><a href="#">Our impact</a></li>
-							<li><a href="#">Testimonials</a></li>
-							<li><a href="{{ site.baseurl }}{% link about-us/our-funding.html %}">Our funding</a></li>
-							<li><a href="{{ site.baseurl }}{% link about-us/our-funding/sponsorship.html %}">Sponsorship</a></li>
-							<li><a href="#">Our team</a></li>
-							<li><a href="#">Our community</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Contact us</a></li>
+							<li><a href="{% link about-us/index.html %}">About The Carpentries</a></li>
+                                                        <li><a href="{% link about-us/governance.html %}">Governance</a></li>
+                                                        <li><a href="{% link about-us/values.html %}">Values</a></li>
+							<li><a href="{% link about-us/impact.html %}">Impact</a></li>
+							<li><a href="{% link about-us/team.html %}">Team</a></li>
+							<li><a href="{% link about-us/careers.html %}">Careers</a></li>
+							<li><a href="{% link about-us/financials.html %}">Financials</a></li>
+							<li><a href="{% link about-us/publications.html %}">Publications</a></li>
+							<li><a href="{% link about-us/contact-us.html %}">Contact us</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
-						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Workshops</a>
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Learn</a>
 						<ul class="dropdown-menu">
-							<li><a href="{{ site.baseurl }}{% link workshops.html %}">About workshops</a></li>
-							<li><a href="{{ site.baseurl }}{% link workshops/upcoming-workshops.html %}">Current workshops</a></li>
-							<li><a href="{{ site.baseurl }}{% link workshops/past-workshops.html %}">Past workshops</a></li>
-							<li><a href="#">Host a workshop</a></li>
-							<li><a href="#">Request a workshop</a></li>
-							<li><a href="#">Curricula</a></li>
-							<li><a href="#">Software Carpentries workshops</a></li>
-							<li><a href="#">Data Carpentries workshops</a></li>
-							<li><a href="#">Library Carpentries workshops</a></li>
+							<li><a href="#">Lessons</a></li>
+							<li><a href="#">Workshops</a></li>
+							<li><a href="#">Instructor Training</a></li>
+							<li><a href="#">Trainer Training</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Volunteer</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Become an instructor</a></li>
-							<li><a href="#">Develop a lesson</a></li>
-							<li><a href="#">Join a comittee</a></li>
-							<li><a href="#">Mentorship program</a></li>
+							<li><a href="#">Community</a></li>
+							<li><a href="#">Get Involved</a></li>
+							<li><a href="#">Handbook</a></li>
+							<li><a href="#">Newsletter</a></li>
+							<li><a href="#">AMY</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
-						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Membership</a>
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Host</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Join The Carpentries</a></li>
-							<li><a href="#">Current members</a></li>
+							<li><a href="#">Host a workshop</a></li>
+							<li><a href="#">Host a training</a></li>
+							<li><a href="#">Pricing</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
-						<a href="{{ site.baseurl }}{% link blog.html %}" class="nav-link">Blog</a>
+						<a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Support</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Membership</a></li>
+							<li><a href="#">Donate</a></li>
+							<li><a href="#">Sponsorship</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="{% link blog/blog.html %}" class="nav-link">Blog</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="btn btn-ghost nav-link">Donate</a>
