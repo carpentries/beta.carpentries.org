@@ -4,6 +4,7 @@ plugins:
   - jekyll-assets
 exclude:
   - README.md
+  - vendor
 
 ## Variables -------------------------------------------------------------------
 dc_website: https://datacarpentry.org
