@@ -1,4 +1,6 @@
-{% for statistics in site.data.statistics %}
+{% assign badges_stats = site.data.badges_stats %}
+{% assign n_workshops = site.data.all_past_workshops | size  %}
+{% assign n_countries = site.data.all_past_workshops | where_exp: "item", "item.country != 'W3'" | group_by: "country"  %}
 	<div class="statistics">
 		<div class="container">
 			<div class="row">
@@ -9,15 +11,15 @@
 					{% asset blob-left alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">More than</p>
-						<p class="stat-number">{{ statistics.instructors }}</p>
+						<p class="stat-number">{{ badges_stats.n_instructors }}</p>
 						<p class="stat-text">instructors</p>
 					</div>
 				</div>
 				<div class="col-md-4 stat">
 					{% asset blob-middle alt:'' %}
 					<div class="wrapper">
-						<p class="stat-text">Almost</p>
-						<p class="stat-number">{{ statistics.learners }}</p>
+						<p class="stat-text">About</p>
+						<p class="stat-number">{{ n_workshops | times: 25}}</p>
 						<p class="stat-text">learners</p>
 					</div>
 				</div>
@@ -25,7 +27,7 @@
 					{% asset blob-right alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">More than</p>
-						<p class="stat-number">{{ statistics.countries }}</p>
+						<p class="stat-number">{{ n_countries | size }}</p>
 						<p class="stat-text">countries</p>
 					</div>
 				</div>
@@ -35,4 +37,3 @@
 			</div>
 		</div>
 	</div>
-{% endfor %}

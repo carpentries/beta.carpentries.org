@@ -1,15 +1,39 @@
 url: https://beta.carpentries.org
 permalink: /:title/
+
+## Plugins ---------------------------------------------------------------------
 plugins:
   - jekyll-assets
-exclude:
-  - README.md
-  - vendor
+  - jekyll-get-json
+
 
 ## Variables -------------------------------------------------------------------
+
+### Websites ###
+
 dc_website: https://datacarpentry.org
 sc_website: https://software-carpentry.org
 lc_website: https://librarycarpentry.org
+
+## Data feeds sources ----------------------------------------------------------
+
+jekyll_get_json:
+  - data: all_badged_people
+    json: 'https://feeds.carpentries.org/all_badged_people.json'
+  - data: all_past_workshops
+    json: 'https://feeds.carpentries.org/all_past_workshops.json'
+  - data: all_upcoming_workshops
+    json: 'https://feeds.carpentries.org/all_upcoming_workshops.json'
+  - data: badges_stats
+    json: 'https://feeds.carpentries.org/badges_stats.json'
+  - data: community_lessons
+    json: 'https://feeds.carpentries.org/community_lessons.json'
+  - data: help_wanted_issues
+    json: 'https://feeds.carpentries.org/help_wanted_issues.json'
+  - data: newsletter
+    json: 'https://feeds.carpentries.org/newsletter.json'
+  - data: members
+    json: 'https://feeds.carpentries.org/all_public_memberships.json'
 
 
 ## Assets plugin configuration -------------------------------------------------
@@ -63,3 +87,8 @@ assets:
             strip: all
           optipng:
             level: 6
+
+## Files to exclude ------------------------------------------------------------
+exclude:
+  - README.md
+  - vendor
