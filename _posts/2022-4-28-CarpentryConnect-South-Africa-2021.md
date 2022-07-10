@@ -10,7 +10,7 @@ time: "09:00:00"
 tags: ["Africa", "CarpentryCon", "Community", "Data", "Events"]
 ---
 <figure>
-	{% asset za class="img-fluid" %}
+	{% asset cc-za class="img-fluid" %}
 	<figcaption>Image: [image description]</figcaption>
 </figure>
 

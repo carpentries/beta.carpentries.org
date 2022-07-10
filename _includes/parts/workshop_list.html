@@ -1,51 +1,81 @@
-{% for workshop in site.data.full_workshops %}
+{% for workshop in workshop_list limit:5 %}
+
+{% assign tags = workshop.tag_name | split: "," | downcase %}
+
+{% if tags contains "ttt" %}
+  {% continue %}
+{% elsif tags contains "swc" %}
+  {% assign workshop_type = "software" %}
+  {% assign workshop_type_text = "Sofware Carpentry" %}
+{% elsif tags contains "dc" %}
+  {% assign workshop_type = "data" %}
+  {% assign workshop_type_text = "Data Carpentry" %}
+{% elsif tags contains "lc" %}
+  {% assign workshop_type = "library" %}
+  {% assign workshop_type_text = "Library Carpentry" %}
+{% elsif tags contains "circuits" %}
+  {% assign workshop_type = "carpentries" %}
+  {% assign workshop_type_text = "The Carpentries" %}
+{% else %}
+  {% assign workshop_type = "cp-unknown" %}
+  {% assign workshop_type_text = "Unknown" %}
+{% endif %}
+
+{% assign meeting = "" %}
+{% if tags contains "online" %}
+{% assign meeting = "Online" %}
+{% else %}
+{% assign meeting = "In-Person" %}
+{% endif %}
+
+{% assign country = site.data.country_codes | where: "iso2c", workshop.country %}
+{% assign country = country[0].["country_name"] %}
+
+{% assign curriculum = site.data.amy_curricula | where: "slug", workshop.curriculum %}
+{% assign curriculum_name = curriculum[0].["name"] %}
+
 	<article>
 		<ul class="workshop-flex flex-wrap list-unstyled">
 			<li class="carpentry">
-				{% asset "{{ workshop.carpentry_logo }}" class="list-icon" %} {{ workshop.carpentry }}
+				{% asset "{{ workshop_type }}" class="list-icon" %} {{ workshop_type_text }}
 			</li>
 			<li class="language">
-				{% asset "{{ workshop.language_icon }}" class="list-icon" %}{{ workshop.language }}
+				{% asset "{{ workshop.country | downcase }}" class="list-icon" %}{{ country }}
 			</li>
-			<li class="venue">
-				{% asset "{{ workshop.venue_logo }}" class="list-icon" %}{{ workshop.venue }}
-			</li>
+                        {% if meeting %}
 			<li class="meeting">
-				{% asset "{{ workshop.meeting }}" class="list-icon" %} {{ workshop.meeting }}
+				{% asset "{{ meeting }}" class="list-icon" %} {{ meeting }}
 			</li>
+                        {% endif %}
 		</ul>
 		<h2>
-			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="Read {{ post.title | escape_once }}"> {{ workshop.title }} </a>
+			<a href="{{ workshop.url }}" title="Go to {{ workshop.venue | escape_once }} workshop site"> {{ workshop.venue }} </a>
 		</h2>
 		<p class="teaser">
-			{{ workshop.audience }}
+			{{ curriculum_name }}
 		</p>
 
 		<ul class="list-unstyled mb-0">
 			{% if workshop.instructors %}
+                        {% assign instructors = workshop.instructors | split: "," %}
 			<li class="instructors d-flex flex-row"><strong>Instructors:&nbsp</strong>
 				<ul class="list-unstyled mb-0 d-flex flex-row flex-wrap">
-					{%- for person in workshop.instructors -%}
-						<li>
-							{%- if forloop.index > 1 -%}, {% endif -%}
-							{{ person -}}
-						</li>
+					{%- for person in instructors -%}
+						<li>{{ person -}}{%- unless forloop.last -%},&nbsp;{% endunless -%}</li>
 					{%- endfor -%}
 				</ul>
 			</li>
 			{% endif %}
 
 			{% if workshop.helpers %}
-				<li class="helpers d-flex flex-row"><strong>Helpers:&nbsp</strong>
-					<ul class="list-unstyled mb-0 d-flex flex-row flex-wrap">
-						{%- for person in workshop.helpers -%}
-							<li>
-								{%- if forloop.index > 1 -%}, {% endif -%}
-								{{ person -}}
-							</li>
-						{%- endfor -%}
-					</ul>
-				</li>
+                        {% assign helpers = workshop.helpers | split: "," %}
+			<li class="helpers d-flex flex-row"><strong>Helpers:&nbsp</strong>
+			        <ul class="list-unstyled mb-0 d-flex flex-row flex-wrap">
+				        {%- for person in helpers -%}
+					        <li>{{ person -}}{%- unless forloop.last -%},&nbsp;{% endunless -%}</li>
+					{%- endfor -%}
+				</ul>
+			</li>
 			{% endif %}
 		</ul>
 
@@ -65,4 +95,4 @@
 			{% endif %}
 		</div>
 	</article>
-{% endfor %}
+        {% endfor %}

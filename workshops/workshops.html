@@ -18,6 +18,7 @@ breadcrumb: Workshops
 </section>
 <p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="past_workshops.html" class="link underline">here</a>.</p>
 <div id="workshop-container">
+{% assign workshop_list = site.data.all_upcoming_workshops %}
 {% include parts/workshop_list.html %}
 </div>
 <hr/>

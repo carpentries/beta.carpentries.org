@@ -34,6 +34,8 @@ jekyll_get_json:
     json: 'https://feeds.carpentries.org/newsletter.json'
   - data: members
     json: 'https://feeds.carpentries.org/all_public_memberships.json'
+  - data: amy_curricula
+    json: 'https://feeds.carpentries.org/amy_curricula.json'
 
 
 ## Assets plugin configuration -------------------------------------------------
@@ -53,17 +55,10 @@ assets:
     - _assets/stylesheets
     - _assets/javascripts
     - _assets/images
+    - _assets/images/lesson-program-logos
+    - _assets/images/flags
     - _assets/downloads
     - _assets/fonts
-  jekyll_get_json:
-    - data: workshops
-      json: '_data/all_workshops.json'
-    - data: workshops_full
-      json: '_data/full_workshops.json'
-    - data: statistics
-      json: '_data/statistics.json'
-    - data: testimonials
-      json: '_data/testimonials.json'
   plugins:
     img:
       optim:
