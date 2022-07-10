@@ -16,11 +16,10 @@ breadcrumb: Workshops
 <section id="upcoming" class="section">
 	<h2>Upcoming workshops</h2>
 </section>
-<p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="past_workshops.html" class="link underline">here</a>.</p>
+<p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="{% link workshops/upcoming-workshops.html %}" class="link underline">here</a>.</p>
 <div id="workshop-container">
-{% assign workshop_list = site.data.all_upcoming_workshops %}
-{% include parts/workshop_list.html %}
+{% include parts/workshop_list.html data=site.data.all_upcoming_workshops limit=5 %}
 </div>
 <hr/>
 <br/>
-<p class="sm">See past workshops <a href="past_workshops.html" class="link underline">here</a>.</p>
+<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>

@@ -17,8 +17,8 @@ breadcrumb: Upcoming workshops
 	{% asset "filter" %} Filter
 </button>
 <div id="workshop-container">
-	{% include parts/workshop_list.html %}
+	{% include parts/workshop_list.html data=site.data.all_upcoming_workshops %}
 </div>
 <hr/>
 <br/>
-<p class="sm">See past workshops <a href="past_workshops.html" class="link underline">here</a>.</p>
+<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>

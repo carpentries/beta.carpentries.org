@@ -1,4 +1,10 @@
-{% for workshop in workshop_list limit:5 %}
+{% if include.limit %}
+{% assign lim = include.limit %}
+{% else %}
+{% assign lim = include.data | size %}
+{% endif %}
+
+{% for workshop in include.data limit:lim %}
 
 {% assign tags = workshop.tag_name | split: "," | downcase %}
 
