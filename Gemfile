@@ -5,4 +5,5 @@ group :jekyll_plugins do
   gem 'sprockets', "~> 3.7"
   gem 'jekyll-assets'
   gem 'jekyll-get-json', "~> 1.0.0"
+  gem "jekyll-last-modified-at"
 end

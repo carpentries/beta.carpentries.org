@@ -5,6 +5,7 @@ permalink: /:title/
 plugins:
   - jekyll-assets
   - jekyll-get-json
+  - jekyll-last-modified-at
 
 
 ## Variables -------------------------------------------------------------------
