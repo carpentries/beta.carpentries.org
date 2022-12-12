@@ -10,6 +10,6 @@ EOF
 
 # run the postinstall script to ensure that cached versions of node modules are
 # added to the right place
-postinstall.sh
+bash postinstall.sh
 
 bundle exec jekyll build --config _config.yml,_config_netlify.yml --future --limit_posts 5
