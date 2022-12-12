@@ -4,22 +4,87 @@ title: Workshops - The Carpentries
 breadcrumb: Workshops
 ---
 <section id="about" class="section">
-	<h2>About carpentries workshops</h2>
-	<p>Note: keep this section short and think about who the audience is. </p>
-	<p>Our hands-on workshops empower students to learn new skills in order to work effectively and reproducibly with data and code. Our certified volunteer Instructors are trained in pedagogy and focus on creating a motivating and engaging environment for learners.</p>
-	<p>More information and details about Carpentries workshops can be found here. [note: link to workshop handbook]</p>
+	<h2>What is a Carpentries workshop?</h2>
+
+	<p>	Dessert tootsie roll shortbread danish jelly-o pie gummies. Cake lemon drops pudding danish bear claw jelly-o. Oat cake cake cake topping candy cake donut brownie.
+	</p>
+	<p>	Sesame snaps halvah oat cake sesame snaps chocolate bar lemon drops gingerbread. Bonbon pie pie macaroon jujubes lemon drops tart. Sugar plum halvah caramels jelly-o tootsie roll sugar plum chocolate bar.
+	</p>
+
+
 	<figure>
 		{% asset workshops-photo class="img-fluid" %}
 		<figcaption>Image: [image description]</figcaption>
 	</figure>
+
 </section>
-<section id="upcoming" class="section">
+
+
+
+<section id="numbers" class="section">
+
+	<h2>Carpentries by the numbers</h2>
+
+	<p>Dessert chocolate toffee chocolate chocolate cake. Caramels apple pie chocolate cake bear claw powder chocolate. Chocolate bar jelly-o halvah macaroon sweet roll fruitcake. Chocolate bear claw oat cake apple pie tart lemon drops shortbread.</p>
+
+	<p>Tootsie roll cookie pudding cheesecake soufflé jelly-o sweet candy carrot cake. Dessert chupa chups gingerbread sugar plum pie pie sesame snaps pastry. Candy canes jelly-o wafer chocolate tiramisu croissant muffin chupa chups candy canes.</p>
+
+</section>
+
+
+<section id="curriculum"  class="section">
+
+	<h2>Workshop Curriculum</h2>
+	<p>Jelly halvah carrot cake pudding lollipop muffin topping candy. Cheesecake pie cupcake sweet roll sesame snaps marshmallow cotton candy. Shortbread soufflé muffin sweet carrot cake powder pudding cotton candy.</p>
+	<p>Muffin powder jelly beans gummi bears gummi bears cheesecake. Gingerbread fruitcake bonbon chupa chups croissant. Chocolate cake halvah donut toffee sweet sesame snaps carrot cake jelly.</p>
+
+</section>
+
+<section id="organising" class="section">
+
+	<h2>Organising a workshop</h2>
+	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
+
+	<h3>Requesting a centrally organised workshop</h3>
+	<p>Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.</p>
+
+</section>
+
+
+<section id="cost" class="section">
+
+	<h2>Workshop Cost</h2>
+	<h3>Travel expenses for instructors</h3>
+	<p>Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.</p>
+
+	<h3>Workshop Administration Financial Support</h3>
+
+	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
+
+</section>
+
+
+
+<section id="contact" class="section">
+
+	<h2>Contact Us</h2>
+	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
+
+</section>
+
+
+<section id="upcoming-workshops" class="section">
+
 	<h2>Upcoming workshops</h2>
+	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
+
+	<p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="{% link workshops/upcoming-workshops.html %}" class="link underline">here</a>.</p>
+
+	<div id="workshop-container">
+	{% include parts/workshop_list.html data=site.data.all_upcoming_workshops limit=5 %}
+	</div>
+	<hr/>
+	<br/>
+	<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>
+
 </section>
-<p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="{% link workshops/upcoming-workshops.html %}" class="link underline">here</a>.</p>
-<div id="workshop-container">
-{% include parts/workshop_list.html data=site.data.all_upcoming_workshops limit=5 %}
-</div>
-<hr/>
-<br/>
-<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>
