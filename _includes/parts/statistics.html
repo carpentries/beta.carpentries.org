@@ -12,7 +12,9 @@
 				<div class="col-12">
 					<h2>Our diverse and global community is comprised of</h2>
 				</div>
-				<div class="col-md-4 stat">
+
+
+				<div class="col-md-3 stat">
 					{% asset blob-left alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">More than</p>
@@ -20,7 +22,7 @@
 						<p class="stat-text">volunteers</p>
 					</div>
 				</div>
-				<div class="col-md-4 stat">
+				<div class="col-md-3 stat">
 					{% asset blob-middle alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">About</p>
@@ -28,7 +30,15 @@
 						<p class="stat-text">learners</p>
 					</div>
 				</div>
-				<div class="col-md-4 stat">
+				<div class="col-md-3 stat">
+					{% asset blob-right alt:'' %}
+					<div class="wrapper">
+						<p class="stat-text">More than</p>
+						<p class="stat-number">{{ members | size }}</p>
+						<p class="stat-text">members</p>
+					</div>
+				</div>				
+				<div class="col-md-3 stat">
 					{% asset blob-right alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">More than</p>
@@ -36,6 +46,8 @@
 						<p class="stat-text">countries</p>
 					</div>
 				</div>
+
+
 				<div class="col-12">
 					<a href="#" class="btn btn-secondary">Join our community</a>
 				</div>
