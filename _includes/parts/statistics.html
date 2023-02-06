@@ -1,7 +1,12 @@
 {% assign badges_stats = site.data.badges_stats %}
 {% assign n_workshops = site.data.all_past_workshops | size  %}
 {% assign n_countries = site.data.all_past_workshops | where_exp: "item", "item.country != 'W3'" | group_by: "country"  %}
-	<div class="statistics">
+
+{% assign total_volunteers =  badges_stats.n_maintainers | 
+							  plus: badges_stats.n_trainers |
+							  plus: badges_stats.n_instructors %}
+
+<div class="statistics">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -11,7 +16,7 @@
 					{% asset blob-left alt:'' %}
 					<div class="wrapper">
 						<p class="stat-text">More than</p>
-						<p class="stat-number">{{ badges_stats.n_instructors }}</p>
+						<p class="stat-number">{{ total_volunteers }}</p>
 						<p class="stat-text">instructors</p>
 					</div>
 				</div>
