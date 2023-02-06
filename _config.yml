@@ -58,6 +58,7 @@ assets:
     - _assets/images
     - _assets/images/lesson-program-logos
     - _assets/images/flags
+    - _assets/images/supporters
     - _assets/downloads
     - _assets/fonts
   plugins:
