@@ -3,88 +3,142 @@ layout: workshops
 title: Workshops - The Carpentries
 breadcrumb: Workshops
 ---
-<section id="about" class="section">
-	<h2>What is a Carpentries workshop?</h2>
-
-	<p>	Dessert tootsie roll shortbread danish jelly-o pie gummies. Cake lemon drops pudding danish bear claw jelly-o. Oat cake cake cake topping candy cake donut brownie.
-	</p>
-	<p>	Sesame snaps halvah oat cake sesame snaps chocolate bar lemon drops gingerbread. Bonbon pie pie macaroon jujubes lemon drops tart. Sugar plum halvah caramels jelly-o tootsie roll sugar plum chocolate bar.
-	</p>
-
-
+<div class="section" id="workshop_introduction">
+	<h2>Overview</h2>
+	<p>The Carpentries teaches workshops around the world on the foundational skills to work effectively and reproducibly with data and code. Our certified volunteer Instructors focus on creating a motivating and engaging environment while teaching topics like Python, R, Git, Open Refine, and more. Our workshops provide hands-on learning experiences that empower learners and build confidence in using their new skills to support their work. </p>
+	<h3>Why The Carpentries Workshops?</h3>
+	<ul>
+		<li><strong>No previous experience needed.</strong>	Our workshops target novice learners with little to no prior experience.</li>
+		<li>><strong>Live Coding and Hands-On.</strong> You'll code alongside the instructor and more blah blah blah about live coding things at the workshop.</li>
+		<li>><strong>Real-World Applications.</strong> Our workshops include real-world examples that demonstrate practical skills used in the workplace. The exercises in The Carpentries lesson are designed to help you practice skills that you can immediately apply to your work.</li>
+		<li>><strong>Inclusive community of practice.</strong> Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake.</li>
+		<li>><strong>Broad scope of lessons.</strong> We offer a variety of lessons serving various discplines from librarians to astronomers.</li>
+	</ul>
+	<a href="{% link workshops/upcoming-workshops.html %}" class="btn btn-primary">View Upcoming Workshops</a>
 	<figure>
 		{% asset workshops-photo class="img-fluid" %}
 		<figcaption>Image: [image description]</figcaption>
 	</figure>
-
-</section>
-
-
-
-<section id="numbers" class="section">
-
-	<h2>Carpentries by the numbers</h2>
-
-	<p>Dessert chocolate toffee chocolate chocolate cake. Caramels apple pie chocolate cake bear claw powder chocolate. Chocolate bar jelly-o halvah macaroon sweet roll fruitcake. Chocolate bear claw oat cake apple pie tart lemon drops shortbread.</p>
-
-	<p>Tootsie roll cookie pudding cheesecake soufflé jelly-o sweet candy carrot cake. Dessert chupa chups gingerbread sugar plum pie pie sesame snaps pastry. Candy canes jelly-o wafer chocolate tiramisu croissant muffin chupa chups candy canes.</p>
-
-</section>
-
-
-<section id="curriculum"  class="section">
-
+</div>
+<div class="section" id="workshop_curricula">
 	<h2>Workshop Curriculum</h2>
-	<p>Jelly halvah carrot cake pudding lollipop muffin topping candy. Cheesecake pie cupcake sweet roll sesame snaps marshmallow cotton candy. Shortbread soufflé muffin sweet carrot cake powder pudding cotton candy.</p>
-	<p>Muffin powder jelly beans gummi bears gummi bears cheesecake. Gingerbread fruitcake bonbon chupa chups croissant. Chocolate cake halvah donut toffee sweet sesame snaps carrot cake jelly.</p>
-
-</section>
-
-<section id="organising" class="section">
-
-	<h2>Organising a workshop</h2>
-	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
-
-	<h3>Requesting a centrally organised workshop</h3>
-	<p>Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.</p>
-
-</section>
-
-
-<section id="cost" class="section">
-
-	<h2>Workshop Cost</h2>
-	<h3>Travel expenses for instructors</h3>
-	<p>Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.</p>
-
-	<h3>Workshop Administration Financial Support</h3>
-
-	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
-
-</section>
-
-
-
-<section id="contact" class="section">
-
-	<h2>Contact Us</h2>
-	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
-
-</section>
-
-
-<section id="upcoming-workshops" class="section">
-
-	<h2>Upcoming workshops</h2>
-	<p>Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.</p>
-
-	<p>Check out our upcoming workshops to see how they are run. A full list of upcoming workshops can be found <a href="{% link workshops/upcoming-workshops.html %}" class="link underline">here</a>.</p>
-
-	<div id="workshop-container">
-	{% include parts/workshop_list.html data=site.data.all_upcoming_workshops limit=5 %}
+	<p>The Carpentries has three official lesson programs, each providing lessons catered to a specific audience or purpose. Our workshops may focus on lessons from one set of curricula or mix and match lesson's to provide the audience with an experience catered to their needs.</p>
+	<div class="card-group">
+		<div class="card">
+		  <img src="#" class="card-img-top" alt="software-carpentry-logo">
+		  <div class="card-body">
+			<h5 class="card-title">Software Carpentry Lessons</h5>
+			<p class="card-text">Lessons are domain-agnostic, and teach the Unix shell, coding in R or Python, and version control using Git. Excersises are generic and for anyone wanting to be more comfortable with coding.</p>
+		  </div>
+		</div>
+		<div class="card">
+		  <img src="#" class="card-img-top" alt="library-carpentry-logo">
+		  <div class="card-body">
+			<h5 class="card-title">Library Carpentry</h5>
+			<p class="card-text"> Lessons are domain-agnostic, and teach OpenRefine, Git, SQL, R, Python, and more. Exercises include datasets that will be familiar to librarians.</p>
+		  </div>
+		</div>
+		<div class="card">
+		  <img src="#" class="card-img-top" alt="data-carpentry-logo">
+		  <div class="card-body">
+			<h5 class="card-title">Data Carpentry</h5>
+			<p class="card-text">Lessons are domain-specfic (include examples from their type of work). Learn how to use code to work more effectively and reproducibly with data with lessons based in Astronoomy, Ecology, Genomics, Image Processing and Social Sciences.</p>
+		  </div>
+		</div>
+	  </div>
+	<a href="{% link workshops/upcoming-workshops.html %}" class="btn btn-primary">View Upcoming Workshops</a>
+</div>
+<div class="section" id="what-to-expect">
+	<h2>Location Options</h2>
+	<div class="row">
+		<div class="col-sm-6">
+		  <div class="card">
+			<div class="card-body">
+			  <h5 class="card-title">Online</h5>
+			  <p class="card-text">Wokrshops take place via Zoom or other platform and that is cool.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-6">
+		  <div class="card">
+			<div class="card-body">
+			  <h5 class="card-title">In-Person</h5>
+			  <p class="card-text">Say something here about how these workshops are in person.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<h2>Times and Timezones</h2>
+	<p>We are a global community with events based in many timezones. You are welcome to attend any event that fits your schedule, in the timezone of your choice.</p>
+	<h2>Pricing Options</h2>
+	<div class="row row-cols-1 row-cols-md-3 g-4">
+		<div class="col">
+		  <div class="card">
+			<div class="card-header">
+				Some Workshops
+			  </div>
+			  <div class="card-body">
+				<h5 class="card-title">$Deposit</h5>
+				<p class="card-text">Some workshops ask that you pay a deposit/fee to hold your space in the workshop. The deposit is then refunded upon attendance to the workshop.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="card">
+			<div class="card-header">
+				Most Workshops
+			  </div>
+			  <div class="card-body">
+				<h5 class="card-title">$FREE</h5>
+				<p class="card-text">Most Carpentries Workshops are put on and provided without any charge to attend.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="card">
+			<div class="card-header">
+				Some Workshops
+			  </div>
+			  <div class="card-body">
+				<h5 class="card-title">$Paid</h5>
+				<p class="card-text">Some workshops may charge a fee to attend the workshop. Workshop fees are decided by the workshop hosts and organisers.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>	
+</div>
+<div class="section" id="workshop-community">
+	<h3>More than a Workshop.<br/>Join our global community.</h3>
+	<p>By attending a Carpentries Workshop, you are joining a community of instructors, helpers, learners, and more.</p>
+	<a href="#" class="btn btn-secondary">Get Involved</a>
+	<div class="row statistics about-us">
+		<div class="col-md-4 stat">
+			{% asset blob-left class="blob" alt:'' %}
+			<div class="wrapper">
+				<p class="stat-text">More than</p>
+				<p class="stat-number">3,400</p>
+				<p class="stat-text">Certified Istructors</p>
+			</div>
+		</div>
+		<div class="col-md-4 stat">
+			{% asset blob-middle class="blob" alt:'' %}
+			<div class="wrapper">
+				<p class="stat-text">Recommended by</p>
+				<p class="stat-number">93%</p>
+				<p class="stat-text">Workshop Attendees</p>
+			</div>
+		</div>
+		<div class="col-md-4 stat">
+			{% asset blob-right class="blob" alt:'' %}
+			<div class="wrapper">
+				<p class="stat-text">More than</p>
+				<p class="stat-number">340</p>
+				<p class="stat-text">Workshops in 2022</p>
+			</div>
+		</div>
 	</div>
-	<hr/>
-	<br/>
-	<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>
-
-</section>
+</div>
+<div class="callout">
+	<h2>Contact Us</h2>
+	<p><strong>Have Questions?</strong> Please consult our <a class="underline" href="{% link workshops/faq.html %}">Workshops FAQ</a> or contact the Workshop Administration Team. Our Team is ready to answer any additional questions you may have. To reach us, or to find out more, please send us an email to <a class="underline" href="mailto:workshops@carpentries.org">workshops@carpentries.org</a>.</p>
+</div>
