@@ -15,6 +15,27 @@ plugins:
 dc_website: https://datacarpentry.org
 sc_website: https://software-carpentry.org
 lc_website: https://librarycarpentry.org
+handbook: https://docs.carpentries.org 
+
+### Commonly used links ###
+
+amy: https://amy.carpentries.org/
+workshop_request: https://amy.carpentries.org/forms/workshop/
+training_application: https://amy.carpentries.org/forms/request_training/
+training_curriculum: https://carpentries.github.io/instructor-training/
+
+
+### Commonly used contacts ###
+
+contact: "team@carpentries.org"
+instructor_training_contact: "instructor.training@carpentries.org"
+carpentrycon_contact: "carpentrycon@carpentries.org"
+workshops_contact: "workshops@carpentries.org"
+membership_contact: "membership@carpentries.org"
+community_contact: "community@carpentries.org"
+finance_contact: "finance@carpentries.org"
+jobs_contact: "jobs@carpentries.org"
+sponsorship_contact: "sponsorship@carpentries.org"
 
 ## Data feeds sources ----------------------------------------------------------
 
@@ -39,6 +60,7 @@ jekyll_get_json:
     json: 'https://feeds.carpentries.org/amy_curricula.json'
 
 
+
 ## Assets plugin configuration -------------------------------------------------
 assets:
   #compress:
@@ -58,6 +80,7 @@ assets:
     - _assets/images
     - _assets/images/lesson-program-logos
     - _assets/images/flags
+    - _assets/images/supporters
     - _assets/downloads
     - _assets/fonts
   plugins:
