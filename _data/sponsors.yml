@@ -3,22 +3,22 @@ sponsors:
 - name: 'Gordon & Betty Moore Foundation'
   logo: moore-logo
   active: true  
-  url: ""
+  url: "https://www.moore.org/"
 
 - name: Alfred P Sloan Foundation
   logo: alfred-sloan-logo
   active: true  
-  url: ""
+  url: "https://sloan.org/"
   
 - name: Chan Zuckerberg Initaitive
   logo: chan-zuck-logo
   active: true
-  url: ""
+  url: "https://chanzuckerberg.com/"
 
 - name: Posit
-  logo: r-studio-logo
+  logo: posit-logo
   active: true 
-  url: ""
+  url: "https://posit.co/"
 
 - name: Rackspace
   logo: rackspace-logo
