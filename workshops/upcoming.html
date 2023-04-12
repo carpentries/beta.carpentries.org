@@ -1,8 +1,18 @@
 ---
-layout: workshops_browse
-title: Upcoming workshops - The Carpentries
-breadcrumb: Upcoming workshops
+layout: workshops
+title: Upcoming Workshops
+breadcrumb: Upcoming Workshops
 ---
+<div class="section" id="introduction">
+    <h3>Inclusive and hands-on events, empowering students to learn new skills and build confidence in using them in their work.</h3>
+	<p>Select an event to learn more about that event including:</p>
+	<ul>
+		<li>Lessons being taught</li>
+		<li>Schedule preview</li>
+		<li>Registration information,</li>
+		<li>and organiser contact information.</li>
+	</ul>
+</div>
 <div class="btn-group">
 	<button type="button" class="btn btn-text dropdown-toggle sort" data-bs-toggle="dropdown" aria-expanded="false">
 		Sort by date
@@ -16,9 +26,9 @@ breadcrumb: Upcoming workshops
 <button type="button" class="btn btn-text filter float-end" aria-expanded="false">
 	{% asset "filter" %} Filter
 </button>
-<div id="workshop-container">
+<div id="workshop_container">
 	{% include parts/workshop_list.html data=site.data.all_upcoming_workshops %}
 </div>
 <hr/>
 <br/>
-<p class="sm">See past workshops <a href="{% link workshops/past-workshops.html %}" class="link underline">here</a>.</p>
+<p class="sm">See past workshops <a href="{% link workshops/past.html %}" class="underline">here</a>.</p>

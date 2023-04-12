@@ -1,0 +1,10 @@
+.checked-list{
+    li:before {
+        border: none;
+			position: relative;
+			top: 2px;
+			left: 0px;
+			margin-right: 10px;
+			content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3332 4L5.99984 11.3333L2.6665 8' stroke='%23383838 ' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+}
