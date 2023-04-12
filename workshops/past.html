@@ -7,22 +7,4 @@ breadcrumb: Past Workshops
 	<h4>Please Note These Events Have Concluded</h4>
     <p>ADD NOTE HERE ABOUT WHY THIS PAGE EXISTS....</p>
 </div>
-<div class="btn-group">
-	<button type="button" class="btn btn-text dropdown-toggle sort" data-bs-toggle="dropdown" aria-expanded="false">
-		Sort by date
-	</button>
-	<ul class="dropdown-menu">
-		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
-		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
-		<li><a class="dropdown-item" href="#">Sort by ...</a></li>
-	</ul>
-</div>
-<button type="button" class="btn btn-text filter float-end" aria-expanded="false">
-	{% asset "filter" %} Filter
-</button>
-<div id="workshop-container">
-	{% include parts/workshop_list.html data=site.data.all_past_workshops %}
-</div>
-<hr/>
-<br/>
-<p class="sm">See upcoming workshops <a href="#" class="underline">here</a>.</p>
+
