@@ -1,6 +1,6 @@
 # beta.carpentries.org
 
-Beta version of the new The Carpentries website. This repo is under development and does not contain current or accurate information about The Carpentries.
+This is a draft website for The Carpentries.  It is being deprecated in favor of this forthcoming Hugo theme. This repo does not contain current or accurate information about The Carpentries.
 
 ## Setup <a name="setup"></a>
 
